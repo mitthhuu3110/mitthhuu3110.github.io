@@ -6,10 +6,10 @@ export default function Hero() {
         Mithilesh Charan Perugu
       </h1>
       <p className="text-lg sm:text-xl text-gray-600 dark:text-gray-400 font-light max-w-2xl">
-        Backend Engineer • DevOps Enthusiast • Cloud-Native Craftsman
+        Backend Engineer • DevOps Enthusiast 
       </p>
       <p className="max-w-xl text-base sm:text-lg">
-        Building scalable systems, automating boring stuff, and breaking production (with permission) at Ford. Currently obsessed with Spring Boot, GCP, Docker, and system design.
+        Building scalable systems, automating boring stuff, and breaking production (with permission) at Ford. Currently obsessed with Spring Boot, Python, AWS, GCP, Kubernetes, Docker.
       </p>
 
       <div className="flex gap-4 pt-2">

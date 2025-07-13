@@ -11,7 +11,12 @@ export default function Navbar() {
         mithu.dev
       </Link>
       <div className="flex items-center gap-4">
-        {/* Add other links later if needed */}
+        <Link
+          href="/unplugged"
+          className="text-sm font-mono hover:underline underline-offset-4"
+        >
+          Unplugged
+        </Link>
         <ThemeToggle />
       </div>
     </nav>
