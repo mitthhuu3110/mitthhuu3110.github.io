@@ -1,12 +1,10 @@
-// data/experience.ts
-
-export interface Experience {
+export type Experience = {
   role: string;
   company: string;
   location: string;
   duration: string;
   bullets: string[];
-}
+};
 
 export const experiences: Experience[] = [
   {

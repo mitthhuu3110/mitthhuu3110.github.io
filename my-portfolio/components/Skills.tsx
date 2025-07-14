@@ -13,7 +13,7 @@ const icons = [
   'gcp',
   'aws',
   'kubernetes',
-  'github',
+  'git',
   'c++',
   'nodejs',
   'jira',

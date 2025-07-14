@@ -2,21 +2,24 @@
 @tailwind components;
 @tailwind utilities;
 
+
 :root {
-  --background: #ffffff;
-  --text: #000000;
+  --bg: #cee4e7;         /* Light background */
+  --base: #000000;       /* Light text */
+  --brand-orange: #f97316;
 }
 
 .dark {
-  --background: #0d0d0d;
-  --text: #ffffff;
+  --bg: #444444;         /* Dark background */
+  --base: #ffffff;       /* Dark text */
+  --brand-orange: #f97316;
 }
 
 body {
   background-color: var(--background);
-  color: var(--text);
+  color: var(--base);
   font-family: 'IBM Plex Mono', monospace;
-  transition: background-color 0.3s, color 0.3s;
+  transition: background-color 0.3s ease, color 0.3s ease;
   scroll-behavior: smooth;
 }
 
