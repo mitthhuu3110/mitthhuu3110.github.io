@@ -15,7 +15,7 @@ export default function Navbar() {
           href="/catchup"
           className='text-sm font-mono hover:underline underline-offset-4'
         >
-          CatchUp with me
+          CatchUp with me! 
         </Link>
         <Link
           href="/unplugged"
