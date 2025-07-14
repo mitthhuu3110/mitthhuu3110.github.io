@@ -34,7 +34,7 @@ export default function CatchUp() {
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-6">
             <a
                 href="mailto:3110mithilesh@gmail.com"
-                className="flex items-center gap-3 border border-gray-300 dark:border-gray-700 px-4 py-3 rounded-lg hover:shadow-lg hover:scale-[1.01] transition-all bg-white dark:bg-[color:var(--bg)]"
+                className="flex items-center gap-3 border border-gray-300 dark:border-gray-700 px-4 py-3 rounded-lg hover:shadow-lg hover:scale-[1.01] transition-all dark:bg-[color:var(--bg)]"
             >
                 <span className="text-xl">📧</span>
                 <div>
@@ -46,7 +46,7 @@ export default function CatchUp() {
             <a
                 href="https://linkedin.com/in/mithilesh-perugu-5a1726236/"
                 target="_blank"
-                className="flex items-center gap-3 border border-gray-300 dark:border-gray-700 px-4 py-3 rounded-lg hover:shadow-lg hover:scale-[1.01] transition-all bg-white dark:bg-[color:var(--bg)]"
+                className="flex items-center gap-3 border border-gray-300 dark:border-gray-700 px-4 py-3 rounded-lg hover:shadow-lg hover:scale-[1.01] transition-all dark:bg-[color:var(--bg)]"
             >
                 <span className="text-xl">🔗</span>
                 <div>
@@ -64,7 +64,7 @@ export default function CatchUp() {
         <p className="mt-8 text-sm text-green-600 font-mono">✅ Message sent successfully! Thanks 🙌</p>
       ) : (
         <form onSubmit={handleSubmit} className="flex flex-col gap-4 mt-10">
-          <label htmlFor="message" className="font-mono text-sm text-brand-orange">📨 Send me a message</label>
+          <label htmlFor="message" className="font-mono text-sm">📨 Send me a message</label>
 
           <textarea
             id="message"

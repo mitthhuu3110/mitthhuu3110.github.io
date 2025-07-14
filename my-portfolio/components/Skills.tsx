@@ -33,7 +33,7 @@ const icons = [
 export default function Skills() {
   return (
     <section id="skills" className="space-y-4">
-      <h2 className="text-2xl sm:text-3xl font-bold font-mono text-center">Skills</h2>
+      <h2 className="text-2xl sm:text-3xl font-bold font-mono">Skills</h2>
       <div className="overflow-hidden relative w-full py-4">
         <div className="animate-marquee whitespace-nowrap flex gap-8 items-center">
           {icons.map((icon, idx) => (
