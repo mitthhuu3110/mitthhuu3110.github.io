@@ -16,7 +16,7 @@
 }
 
 body {
-  background-color: var(--background);
+  background-color: var(--bg);        /* ✅ use the correct CSS variable */
   color: var(--base);
   font-family: 'IBM Plex Mono', monospace;
   transition: background-color 0.3s ease, color 0.3s ease;

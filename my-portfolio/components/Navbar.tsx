@@ -27,6 +27,14 @@ export default function Navbar() {
           CatchUp with me!
         </Link>
         <Link
+          href="/Mithilesh_Charan_Perugu.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-sm font-mono hover:underline underline-offset-4"
+        >
+          📄 Resume
+        </Link>
+        <Link
           href="/unplugged"
           className="text-sm font-mono hover:underline underline-offset-4"
         >
