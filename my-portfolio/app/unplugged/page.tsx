@@ -14,7 +14,7 @@ export default function Unplugged() {
         <h2 className="text-xl font-semibold font-mono text-brand-orange">⌨️ Typing Speed</h2>
         <div className="border-t border-dashed border-gray-400 my-2 w-11/12" />
         <p className="text-base leading-relaxed">
-          I can type at an average of 125 WPM, with a peak at 132 WPM.
+          I can type at an average of 130 WPM, with a peak at 132 WPM.
           Feel free to test your speed too.. 
           <a
             href="https://monkeytype.com/profile/charan_perugu"

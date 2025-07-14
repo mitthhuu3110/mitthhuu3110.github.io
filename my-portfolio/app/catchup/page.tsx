@@ -3,7 +3,7 @@ import Footer from "@/components/Footer";
 export default function CatchUp() {
   return (
     <div className="px-8 md:pl-20 md:pr-10 py-12 max-w-3xl">
-      <h1 className="text-3xl font-bold font-mono"> CatchUp with me! </h1>
+      <h1 className="text-3xl font-bold font-mono text-brand-orange mb-2"> CatchUp with me! </h1>
       <p className="text-lg leading-relaxed text-gray-700 dark:text-gray-300 mt-4">
         int you = Want to talk about tech || work || life ? Ping me directly here : Ping me in LinkedIn;
       </p>
