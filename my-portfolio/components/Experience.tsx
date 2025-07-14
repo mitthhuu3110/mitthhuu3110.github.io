@@ -5,7 +5,7 @@ import ExperienceCard from './ExperienceCard';
 export default function ExperienceSection() {
   return (
     <section
-      className="space-y-8 px-6 py-12 rounded-xl bg-bg text-base text-[color:var(--base)]"
+      className="space-y-8 rounded-xl bg-bg text-base text-[color:var(--base)]"
       id="experience"
     >
       <h2 className="text-2xl sm:text-3xl font-bold font-mono text-brand-orange">

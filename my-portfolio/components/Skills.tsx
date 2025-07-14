@@ -21,7 +21,13 @@ const icons = [
   'openai',
   'jenkins',
   'linux',
-  'postman'
+  'postman',
+  'database',
+  'mongodb',
+  'tailwind',
+  'vscode',
+  'terraform',
+  'github'
 ]; 
 
 export default function Skills() {

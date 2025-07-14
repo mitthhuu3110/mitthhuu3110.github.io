@@ -24,22 +24,37 @@ export default function CatchUp() {
   };
 
   return (
-    <div className="px-8 md:pl-20 md:pr-10 py-12 max-w-3xl text-[color:var(--base)]">
+    <div className="pl-6 pr-4 md:pl-24 md:pr-12 py-12 w-full text-[color:var(--base)]">
       <h1 className="text-3xl font-bold font-mono text-brand-orange mb-2">CatchUp with me!</h1>
 
-      <p className="text-lg leading-relaxed mt-4">
-        <code className="text-sm text-gray-500">int you = Want to talk about tech || work || life ?</code> <br />
-        Ping me directly here or on LinkedIn!
+      <p className="text-base leading-relaxed">
+        If you want to talk about Open roles, Work or anything regarding Tech, feel free to reach out on Email or LinkedIn. Will get back to you in no time. 
       </p>
 
-      {/* Contact Links */}
-      <section className="flex flex-col gap-4 pt-12">
-        <div className="flex gap-4 pt-2">
-          <a href="mailto:3110mithilesh@gmail.com" className="text-sm underline hover:text-blue-600">📧 Email</a>
-          <a href="https://github.com/mitthhuu3110" target="_blank" className="text-sm underline hover:text-blue-600">🐙 GitHub</a>
-          <a href="https://linkedin.com/in/mithilesh-perugu-5a1726236/" target="_blank" className="text-sm underline hover:text-blue-600">🔗 LinkedIn</a>
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-6">
+            <a
+                href="mailto:3110mithilesh@gmail.com"
+                className="flex items-center gap-3 border border-gray-300 dark:border-gray-700 px-4 py-3 rounded-lg hover:shadow-lg hover:scale-[1.01] transition-all bg-white dark:bg-[color:var(--bg)]"
+            >
+                <span className="text-xl">📧</span>
+                <div>
+                <p className="text-sm font-semibold font-mono text-gray-800 dark:text-gray-100">Email Me</p>
+                <p className="text-xs text-gray-600 dark:text-gray-400">3110mithilesh@gmail.com</p>
+                </div>
+            </a>
+
+            <a
+                href="https://linkedin.com/in/mithilesh-perugu-5a1726236/"
+                target="_blank"
+                className="flex items-center gap-3 border border-gray-300 dark:border-gray-700 px-4 py-3 rounded-lg hover:shadow-lg hover:scale-[1.01] transition-all bg-white dark:bg-[color:var(--bg)]"
+            >
+                <span className="text-xl">🔗</span>
+                <div>
+                <p className="text-sm font-semibold font-mono text-gray-800 dark:text-gray-100">Connect on LinkedIn</p>
+                <p className="text-xs text-gray-600 dark:text-gray-400">linkedin.com/in/mithilesh-perugu</p>
+                </div>
+            </a>
         </div>
-      </section>
 
       <p className="text-sm text-gray-500 mt-6">
         Or just send me a message below 👇 — I’ll read it over coffee.
