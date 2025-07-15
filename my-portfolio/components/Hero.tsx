@@ -1,16 +1,19 @@
 // components/Hero.tsx
 export default function Hero() {
   return (
-    <section className="flex flex-col gap-4">
-      <h1 className="text-4xl sm:text-5xl font-extrabold font-mono leading-tight">
+    <section className="space-y-4 text-[color:var(--base)]">
+      <h1 className="text-3xl sm:text-3xl font-bold font-mono tracking-wide uppercase">
         Mithilesh Charan Perugu
       </h1>
-      <p className="text-lg sm:text-xl text-gray-600 dark:text-gray-400 font-light w-full">
-        Software Engineer • Backend Development • DevOps/Cloud Enthusiast  
+
+      <p className="text-sm sm:text-base text-gray-600 dark:text-gray-400 font-mono tracking-wide">
+        Software Engineer • Backend Developer • DevOps & Cloud Enthusiast
       </p>
-      <p className="w-full text-base sm:text-lg">
-        Building scalable systems, automating boring stuff, and breaking production (with permission) at Ford. Currently obsessed with Spring Boot, Python, AWS, GCP, Kubernetes, Docker.
-      </p>
+
+      <div className="w-full border-l-4 border-brand-orange pl-4 text-sm sm:text-base leading-relaxed italic">
+        Building scalable systems, automating boring stuff, and breaking production (with permission) at Ford.<br />
+        Currently obsessed with <span className="text-brand-orange font-semibold">Spring Boot</span>, <span className="text-brand-orange font-semibold">Python</span>, <span className="text-brand-orange font-semibold">REST APIs</span>, <span className="text-brand-orange font-semibold">[AWS, GCP]</span>, <span className="text-brand-orange font-semibold">Kubernetes</span>, and <span className="text-brand-orange font-semibold">Databases</span>.
+      </div>
     </section>
   );
 }

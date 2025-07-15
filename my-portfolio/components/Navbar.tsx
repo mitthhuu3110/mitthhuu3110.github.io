@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import ThemeToggle from './ThemeToggle';
+import { Github } from 'lucide-react';
 
 export default function Navbar() {
   return (
@@ -16,7 +17,7 @@ export default function Navbar() {
           height={28}
           className="rounded-sm"
         />
-        mithu-dev
+        Home
       </Link> 
 
       <div className="flex items-center gap-4">
@@ -40,6 +41,16 @@ export default function Navbar() {
         >
           Unplugged
         </Link>
+        {/* GitHub Icon */}
+        <a
+          href="https://github.com/mitthhuu3110"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="hover:text-brand-orange transition-colors"
+          aria-label="GitHub"
+        >
+          <Github className="w-5 h-5" />
+        </a>
         <ThemeToggle />
       </div>
     </nav>

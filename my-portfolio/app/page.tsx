@@ -38,9 +38,9 @@ export default function Home() {
     <div className="mx-auto space-y-24 px-6 py-8">
       <Hero />
       <About />
-      <Projects />
       <Experience />
       <Skills />
+      <Projects />
       <Achievements />
       <Footer />
     </div>

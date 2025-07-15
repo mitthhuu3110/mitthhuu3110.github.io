@@ -8,7 +8,7 @@ export default function Achievements() {
       className="space-y-8 rounded-xl bg-bg text-base text-[color:var(--base)]"
     >
       <h2 className="text-2xl sm:text-3xl font-bold font-mono text-brand-orange">
-        Achievements
+        Achievements & Certifications
       </h2>
       <div className="space-y-10">
         {achievements.map((item: Achievement, idx: number) => (

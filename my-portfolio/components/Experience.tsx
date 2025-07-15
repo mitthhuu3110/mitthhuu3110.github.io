@@ -8,7 +8,7 @@ export default function ExperienceSection() {
       className="space-y-8 rounded-xl bg-bg text-base text-[color:var(--base)]"
       id="experience"
     >
-      <h2 className="text-2xl sm:text-3xl font-bold font-mono text-brand-orange">
+      <h2 className="text-2xl sm:text-3xl font-bold font-mono">
         Experience
       </h2>
       <div className="space-y-10">
