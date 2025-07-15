@@ -41,7 +41,7 @@ export default function Unplugged() {
         <h2 className="text-xl font-semibold font-mono text-brand-orange">✍️ Writing</h2>
         <div className="border-t border-dashed border-gray-400 my-2 w-11/12" />
         <p className="text-base leading-relaxed w-11/12">
-          I believe writing is engineering with imagination. Giving meaning to your thoughts in various forms of literature is pure wholesome. If I wasn’t an Software Engineer, I’d be writing books. Maybe I still will.
+          Writing is more than a hobby for me — it’s a daily habit that helps me think clearly, express myself better, and stay grounded. Giving meaning to your thoughts in various forms of literature is pure wholesome. If I wasn’t an Software Engineer, I’d be writing books. Maybe I still will.
         </p>
       </section>
 
