@@ -10,7 +10,7 @@ const skills = [
   },
   {
     category: 'Frameworks & Libraries',
-    items: ['springboot', 'react', 'nodejs', 'tailwind', 'nextjs', 'vite', 'flask', 'fastapi']
+    items: ['springboot', 'react', 'nodejs', 'tailwind', 'nextjs', 'vite', 'flask']
   },
   {
     category: 'Databases',
