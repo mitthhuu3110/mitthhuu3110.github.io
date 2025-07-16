@@ -7,11 +7,11 @@ import Image from 'next/image';
 
 export default function Unplugged() {
   return (
-    <div className="relative pl-6 pr-4 md:pl-24 md:pr-12 py-12 w-full text-[color:var(--base)] overflow-hidden">
+    <section className="relative w-full bg-[color:var(--bg)] overflow-hidden">
       
       {/* 🔥 Background image */}
       <Image
-        src="/images/mountain-bg.jpg"
+        src="/images/mountain-bg-2.png"
         alt="Mountain Background"
         fill
         className="absolute inset-0 object-cover opacity-10 pointer-events-none select-none"
@@ -19,7 +19,7 @@ export default function Unplugged() {
       />
 
       {/* 🔥 Foreground content */}
-      <div className="relative z-10">
+      <div className="relative z-10 pl-6 pr-4 md:pl-24 md:pr-12 py-12 w-full text-[color:var(--base)]">
         <h1 className="text-3xl font-bold font-mono text-brand-orange mb-2">Unplugged 🔌</h1>
         <p className="text-lg leading-relaxed mb-8 w-11/12">
           If you want to strike up a convo when we connect. This is a place to know me better. Maybe we can relate to each other somewhere. 👀 Got some plans? Have some fun ideas? We should definitely connect on a weekend. 
@@ -93,6 +93,6 @@ export default function Unplugged() {
 
         <Footer />
       </div>
-    </div>
+    </section>
   );
 }

@@ -27,7 +27,7 @@ export default function About() {
       <div className="border-t border-dashed border-gray-400 my-2 w-2/12" />
 
       <p className="text-base sm:text-lg leading-relaxed w-full">
-        I've completed my B. Tech from <strong>National Institute of Technology, Raipur</strong> (2024) majoring in Computer Science & Engineering with 8.5 CGPA.
+        I've completed my B. Tech from <strong>National Institute of Technology, Raipur</strong> (2024) majoring in Computer Science & Engineering with <strong>8.5 CGPA</strong>.
       </p>
 
       <div className="border-t border-dashed border-gray-400 my-2 w-2/12" />
