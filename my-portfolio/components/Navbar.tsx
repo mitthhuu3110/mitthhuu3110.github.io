@@ -72,62 +72,65 @@ useEffect(() => {
 
   return (
     <nav className="fixed top-0 left-0 w-full z-50 bg-[color:var(--bg)] bg-opacity-90 backdrop-blur-md border-b border-gray-300 dark:border-gray-700 shadow-sm">
-      <div className="max-w-7xl mx-auto px-6 py-3 flex justify-between items-center">
-        {/* Left section: Logo + Scroll Links */}
-        <div className="flex items-center gap-6">
-          <Link
-            href="/"
-            className="flex items-center gap-2 text-lg font-bold font-mono hover:opacity-90 transition-opacity"
-          >
-            <Image
-              src="/images/my-logo.png"
-              alt="Logo"
-              width={28}
-              height={28}
-              className="rounded-sm"
-            />
-            mithu-dev
-          </Link>
+<div className="max-w-7xl mx-auto px-6 py-3 flex items-center justify-between w-full">
+  {/* Left - Logo */}
+  <div className="flex-1 flex items-center justify-start">
+    <Link
+      href="/"
+      className="flex items-center gap-2 text-lg font-bold font-mono hover:opacity-90 transition-opacity"
+    >
+      <Image
+        src="/images/my-logo.png"
+        alt="Logo"
+        width={28}
+        height={28}
+        className="rounded-sm"
+      />
+      mithu-dev
+    </Link>
+  </div>
 
-          {isHome && (
-            <div className="hidden md:flex items-center gap-4">
-              {scrollItems.map((item) => (
-                <button
-                  key={item.id}
-                  onClick={() => handleScroll(item.id)}
-                  className={`text-sm font-mono transition hover:text-brand-orange ${
-                    activeSection === item.id ? 'text-brand-orange underline underline-offset-4' : ''
-                  }`}
-                >
-                  {item.label}
-                </button>
-              ))}
-            </div>
-          )}
-        </div>
+  {/* Center - Section Nav */}
+  {isHome && (
+    <div className="flex-1 hidden md:flex justify-center items-center gap-6">
+      {scrollItems.map((item) => (
+        <button
+          key={item.id}
+          onClick={() => handleScroll(item.id)}
+          className={`text-sm font-mono transition hover:text-brand-orange ${
+            activeSection === item.id
+              ? 'text-brand-orange underline underline-offset-4'
+              : ''
+          }`}
+        >
+          {item.label}
+        </button>
+      ))}
+    </div>
+  )}
 
-        {/* Right section: External links */}
-        <div className="flex items-center gap-4">
-          <Link
-            href="/Mithilesh_Charan_Perugu.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-sm font-mono hover:underline underline-offset-4"
-          >
-            📄 Resume
-          </Link>
-          <a
-            href="https://github.com/mitthhuu3110"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hover:text-brand-orange transition"
-            aria-label="GitHub"
-          >
-            <Github className="w-5 h-5" />
-          </a>
-          <ThemeToggle />
-        </div>
-      </div>
+  {/* Right - Resume / GitHub / Theme */}
+  <div className="flex-1 flex items-center justify-end gap-4">
+    <Link
+      href="/Mithilesh_Charan_Perugu.pdf"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="text-sm font-mono hover:underline underline-offset-4"
+    >
+      📄 Resume
+    </Link>
+    <a
+      href="https://github.com/mitthhuu3110"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="hover:text-brand-orange transition"
+      aria-label="GitHub"
+    >
+      <Github className="w-5 h-5" />
+    </a>
+    <ThemeToggle />
+  </div>
+</div>
     </nav>
   );
 }
