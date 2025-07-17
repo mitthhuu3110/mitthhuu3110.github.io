@@ -5,7 +5,7 @@
   "homepage": "https://mitthhuu3110.github.io/",
   "scripts": {
     "dev": "next dev",
-    "build": "next build && next export",
+    "build": "next build",
     "start": "next start",
     "lint": "next lint",
     "deploy": "gh-pages -d out"
