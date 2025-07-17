@@ -11,7 +11,7 @@ export default function Unplugged() {
       
       {/* 🔥 Background image */}
       <Image
-        src="/images/mountain-bg-2.png"
+        src="/images/bike-bg.png"
         alt="Mountain Background"
         fill
         className="absolute inset-0 object-cover opacity-10 pointer-events-none select-none"
