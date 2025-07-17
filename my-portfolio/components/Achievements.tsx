@@ -7,7 +7,7 @@ export default function Achievements() {
       id="achievements"
       className="space-y-8 rounded-xl bg-bg text-base text-[color:var(--base)]"
     >
-      <h2 className="text-2xl sm:text-3xl font-bold font-mono text-brand-orange">
+      <h2 className="text-2xl sm:text-3xl font-bold font-sans text-brand-orange">
         Achievements & Certifications
       </h2>
       <div className="space-y-10">
@@ -18,10 +18,10 @@ export default function Achievements() {
           >
             <div className="flex flex-col sm:flex-row sm:justify-between">
               <div>
-                <h3 className="text-lg font-semibold font-mono">{item.title}</h3>
-                <p className="text-sm text-gray-600 dark:text-gray-400">{item.issuer}</p>
+                <h3 className="text-lg font-semibold">{item.title}</h3>
+                <p className="text-sm text-gray-600 dark:text-gray-400 font-mono">{item.issuer}</p>
               </div>
-              <p className="text-sm text-gray-500 italic pt-2 sm:pt-0">{item.date}</p>
+              <p className="text-sm text-gray-500 italic pt-2 sm:pt-0 font-mono">{item.date}</p>
             </div>
             <ul className="list-disc list-inside space-y-1">
               {item.description.map((point: string, idx2: number) => (

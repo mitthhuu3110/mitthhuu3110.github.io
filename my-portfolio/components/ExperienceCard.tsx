@@ -26,12 +26,12 @@ export default function ExperienceCard({
     >
       <div className="flex flex-col sm:flex-row sm:justify-between">
         <div>
-          <h3 className="text-lg font-semibold font-mono">{exp.role}</h3>
-          <p className="text-sm text-gray-600 dark:text-gray-400">
+          <h3 className="text-lg font-semibold">{exp.role}</h3>
+          <p className="text-sm text-gray-600 dark:text-gray-400 font-mono">
             {exp.company} – {exp.location}
           </p>
         </div>
-        <p className="text-sm text-gray-500 italic pt-2 sm:pt-0">{exp.duration}</p>
+        <p className="text-sm text-gray-500 italic pt-2 sm:pt-0 font-mono">{exp.duration}</p>
       </div>
     </motion.div>
   );

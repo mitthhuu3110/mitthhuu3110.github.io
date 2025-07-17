@@ -4,7 +4,7 @@ export default function About() {
       className="space-y-4 rounded-xl bg-bg text-base text-[color:var(--base)]"
       id="about"
     >
-      <h2 className="text-2xl sm:text-3xl font-bold font-mono text-brand-orange">
+      <h2 className="text-2xl sm:text-3xl font-bold font-sans text-brand-orange">
         About Me
       </h2>
 
@@ -27,7 +27,7 @@ export default function About() {
       <div className="border-t border-dashed border-gray-400 my-2 w-2/12" />
 
       <p className="text-base sm:text-lg leading-relaxed w-full">
-        I've completed my B. Tech from <strong>National Institute of Technology, Raipur</strong> (2024) majoring in Computer Science & Engineering with <strong>8.5 CGPA</strong>.
+        I graduated with a B.Tech in <span className="text-brand-orange font-semibold font-mono">Computer Science & Engineering</span> from <span className="text-brand-orange font-semibold font-mono">National Institute of Technology, Raipur</span> in 2024, achieving a CGPA of <span className="text-brand-orange font-semibold font-mono">8.5</span>.
       </p>
 
       <div className="border-t border-dashed border-gray-400 my-2 w-2/12" />

@@ -17,6 +17,7 @@ export default function Navbar() {
     { id: 'skills', label: 'Skills' },
     { id: 'projects', label: 'Projects' },
     { id: 'achievements', label: 'Achievements' },
+    { id: 'catchup', label: 'CatchUp' },
   ];
 
   const [activeSection, setActiveSection] = useState('about');

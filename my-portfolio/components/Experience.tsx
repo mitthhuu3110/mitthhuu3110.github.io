@@ -10,7 +10,7 @@ export default function ExperienceSection() {
       id="experience"
       className="relative w-full py-20 bg-bg text-[color:var(--base)]"
     >
-      <h2 className="text-3xl sm:text-4xl font-bold font-mono mb-16 text-center z-10 relative">
+      <h2 className="text-3xl sm:text-4xl font-bold font-sans mb-16 text-center z-10 relative">
         Experience
       </h2>
 

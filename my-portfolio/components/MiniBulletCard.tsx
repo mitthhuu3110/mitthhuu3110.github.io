@@ -21,7 +21,7 @@ export default function MiniBulletCard({
         isLeft ? 'self-start md:ml-0 md:mr-auto' : 'self-end md:ml-auto md:mr-0'
       }`}
     >
-      <p className="text-base leading-relaxed font-mono">{text}</p>
+      <p className="text-base leading-relaxed">{text}</p>
     </motion.div>
   );
 }

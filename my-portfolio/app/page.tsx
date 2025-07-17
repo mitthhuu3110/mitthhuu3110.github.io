@@ -32,6 +32,7 @@ import Experience from '@/components/Experience';
 import Skills from '@/components/Skills';
 import Achievements from '@/components/Achievements';
 import Footer from '@/components/Footer';
+import CatchUp from '@/components/catchup';
 
 export default function Home() {
   return (
@@ -42,6 +43,7 @@ export default function Home() {
       <Skills />
       <Projects />
       <Achievements />
+      <CatchUp />
       <Footer />
     </div>
   );
