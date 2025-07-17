@@ -1,10 +1,8 @@
 import { experiences } from '@/data/experience';
 import type { Experience as ExperienceType } from '@/data/experience';
 import ExperienceCard from './ExperienceCard';
-import MiniBulletCard from './MiniBulletCard';
-import Image from 'next/image';
 
-export default function ExperienceSection() {
+export default function Experience() {
   return (
     <section
       id="experience"
@@ -14,30 +12,12 @@ export default function ExperienceSection() {
         Experience
       </h2>
 
-      {/* Vertical Line */}
-      <div className="absolute top-[120px] left-1/2 transform -translate-x-1/2 h-[calc(100%-160px)] w-[2px] bg-black-400 dark:bg-white-600 z-0" />
+      {/* Dotted Timeline Line */}
+      <div className="absolute top-[120px] left-1/2 transform -translate-x-1/2 h-[calc(100%-160px)] w-[2px] bg-gradient-to-b from-transparent via-gray-500 to-transparent z-0 border-dotted border-l-2 border-gray-400 dark:border-gray-600" />
 
-      {/* Ford Logo at center of line */}
-      <div className="absolute left-1/2 top-[50%] transform -translate-x-1/2 -translate-y-1/2 z-10">
-        <Image src="/images/ford-logo.png" alt="Ford" width={44} height={59} />
-      </div>
-
-      {/* Cards */}
-      <div className="flex flex-col gap-12 z-10 relative">
+      <div className="flex flex-col gap-16 z-10 relative">
         {experiences.map((exp: ExperienceType, idx: number) => (
-          <div key={idx} className="space-y-6">
-            {/* Main Summary Card */}
-            <ExperienceCard exp={exp} index={idx} />
-
-            {/* Bullet Points as Mini Cards */}
-            {exp.bullets.map((point, i) => (
-              <MiniBulletCard
-                key={i}
-                text={point}
-                side={idx % 2 === 0 ? 'left' : 'right'}
-              />
-            ))}
-          </div>
+          <ExperienceCard key={idx} exp={exp} index={idx} />
         ))}
       </div>
     </section>
