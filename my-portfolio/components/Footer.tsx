@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { Github } from 'lucide-react';
 
 export default function Footer() {
@@ -9,14 +10,33 @@ export default function Footer() {
           3110mithilesh@gmail.com
         </Link>
         <span className="hidden sm:inline">|</span>
-        <Link href="https://github.com/mitthhuu3110" target="_blank" className="hover:underline">
+
+        <Link
+          href="https://github.com/mitthhuu3110"
+          target="_blank"
+          className="flex items-center gap-1 hover:underline"
+        >
+          <Github size={14} />
           GitHub
         </Link>
         <span className="hidden sm:inline">|</span>
-        <Link href="https://www.linkedin.com/in/mithilesh-perugu-5a1726236/" target="_blank" className="hover:underline">
+
+        <Link
+          href="https://www.linkedin.com/in/mithilesh-perugu-5a1726236/"
+          target="_blank"
+          className="flex items-center gap-1 hover:underline"
+        >
+          <Image
+            src="/icons/linkedin.svg"
+            alt="LinkedIn"
+            width={14}
+            height={14}
+          />
           LinkedIn
         </Link>
+
         <span className="hidden sm:inline">|</span>
+
         <Link href="/unplugged" className="hover:underline text-brand-orange font-semibold">
           Unplugged 🌿
         </Link>
