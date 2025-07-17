@@ -1,8 +1,9 @@
+// Experience.tsx
 import { experiences } from '@/data/experience';
 import type { Experience as ExperienceType } from '@/data/experience';
 import ExperienceCard from './ExperienceCard';
 
-export default function Experience() {
+export default function ExperienceSection() {
   return (
     <section
       id="experience"
@@ -12,10 +13,7 @@ export default function Experience() {
         Experience
       </h2>
 
-      {/* Dotted Timeline Line */}
-      <div className="absolute top-[120px] left-1/2 transform -translate-x-1/2 h-[calc(100%-160px)] w-[2px] bg-gradient-to-b from-transparent via-gray-500 to-transparent z-0 border-dotted border-l-2 border-gray-400 dark:border-gray-600" />
-
-      <div className="flex flex-col gap-16 z-10 relative">
+      <div className="flex flex-col gap-12 px-6 md:px-24 z-10 relative">
         {experiences.map((exp: ExperienceType, idx: number) => (
           <ExperienceCard key={idx} exp={exp} index={idx} />
         ))}

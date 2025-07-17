@@ -1,3 +1,4 @@
+// ExperienceCard.tsx
 'use client';
 
 import { motion } from 'framer-motion';
@@ -11,72 +12,69 @@ export default function ExperienceCard({
   exp: Experience;
   index: number;
 }) {
-  const isLeft = index % 2 === 0;
-
   return (
     <motion.div
-      initial={{ opacity: 0, scale: 0.95, y: 30 }}
-      whileInView={{ opacity: 1, scale: 1, y: 0 }}
-      transition={{ duration: 0.6, ease: 'easeOut' }}
+      initial={{ opacity: 0, scale: 0.95 }}
+      whileInView={{ opacity: 1, scale: 1 }}
+      transition={{ duration: 0.5, ease: 'easeOut' }}
       viewport={{ once: true }}
-      className={`relative w-full md:w-[46%] px-6 py-6 border border-gray-300 dark:border-gray-700 rounded-xl shadow-sm bg-[color:var(--bg)] ${
-        isLeft ? 'self-start ml-0 mr-auto' : 'self-end mr-0 ml-auto'
-      }`}
+      className="relative w-full px-6 py-6 bg-bg text-[color:var(--base)] border border-gray-300 dark:border-gray-700 rounded-xl shadow transition-shadow duration-300 hover:shadow-lg"
     >
-      <div className="flex flex-col gap-2">
-        <h3 className="text-lg font-bold">{exp.role}</h3>
-
-        <div className="flex items-center gap-2 text-sm text-gray-500 dark:text-gray-400 font-mono">
-          <Briefcase size={16} /> {exp.company}
+      <div className="flex flex-col gap-2 mb-2">
+        <h3 className="text-lg font-semibold flex items-center gap-2">
+          <Briefcase className="w-4 h-4 text-brand-orange" /> {exp.role}
+        </h3>
+        <p className="text-sm text-gray-600 dark:text-gray-400 font-mono">
+          {exp.company}
+        </p>
+        <div className="flex items-center gap-4 text-xs text-gray-500 dark:text-gray-400">
+          <span className="flex items-center gap-1">
+            <MapPin className="w-4 h-4 text-brand-orange" /> {exp.location}
+          </span>
+          <span className="flex items-center gap-1 italic">
+            <CalendarDays className="w-4 h-4 text-brand-orange" /> {exp.duration}
+          </span>
         </div>
-
-        <div className="flex items-center gap-2 text-sm text-gray-500 dark:text-gray-400 font-mono">
-          <MapPin size={16} /> {exp.location}
-        </div>
-
-        <div className="flex items-center gap-2 text-sm italic text-gray-400 font-mono">
-          <CalendarDays size={16} /> {exp.duration}
-        </div>
-
-        {/* Tech Stack Badges */}
-        <div className="flex flex-wrap gap-2 mt-4">
-          {extractTechFromBullets(exp.bullets).map((tech, i) => (
-            <span
-              key={i}
-              className="bg-brand-orange/10 text-brand-orange text-xs font-mono px-2 py-1 rounded-md border border-brand-orange/30"
-            >
-              {tech}
-            </span>
-          ))}
-        </div>
-
-        {/* Bullet Points */}
-        <ul className="list-disc pl-4 mt-4 space-y-2 text-sm text-gray-700 dark:text-gray-300">
-          {exp.bullets.map((point, i) => (
-            <li key={i}>{point}</li>
-          ))}
-        </ul>
       </div>
+
+      {/* Tech badges */}
+      <div className="flex flex-wrap gap-2 mt-2">
+        {extractTechKeywords(exp.bullets).map((keyword, i) => (
+          <span
+            key={i}
+            className="text-xs font-mono bg-brand-orange/90 text-white rounded-md px-2 py-[2px]"
+          >
+            {keyword}
+          </span>
+        ))}
+      </div>
+
+      <ul className="list-disc ml-4 mt-4 space-y-2">
+        {exp.bullets.map((point, i) => (
+          <li
+            key={i}
+            className="text-sm leading-relaxed text-gray-300 dark:text-gray-300"
+          >
+            {point}
+          </li>
+        ))}
+      </ul>
     </motion.div>
   );
 }
 
-// Extracts unique tech stack keywords from bullet points
-function extractTechFromBullets(bullets: string[]): string[] {
-  const techRegex = /\b[A-Z][a-zA-Z0-9\+\#\.\-]*(?:\s[A-Z][a-z]+)?\b/g;
-  const keywords = new Set<string>();
-
+function extractTechKeywords(bullets: string[]): string[] {
+  const techSet = new Set<string>();
+  const regex = /\b[A-Z][a-z]+|[A-Z]{2,}|[a-z]+\b/g;
   bullets.forEach((point) => {
-    const matches = point.match(techRegex);
+    const matches = point.match(regex);
     matches?.forEach((word) => {
       if (
-        word.length > 1 &&
-        !['Using', 'Built', 'Over', 'With', 'Used'].includes(word)
+        ['Java', 'Python', 'AWS', 'Spring', 'Boot', 'React', 'Flask', 'GKE', 'Kubernetes', 'REST', 'API', 'PostgreSQL', 'GPT', 'Dialogflow', 'spaCy', 'Elasticsearch', 'Secret', 'Manager', 'Swagger', 'Apigee'].includes(word)
       ) {
-        keywords.add(word);
+        techSet.add(word);
       }
     });
   });
-
-  return Array.from(keywords).slice(0, 6); // limit to top 6 badges
+  return Array.from(techSet);
 }
