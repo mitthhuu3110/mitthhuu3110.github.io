@@ -62,13 +62,13 @@ export default function About() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: idx * 0.1 }}
               viewport={{ once: true }}
-              className="flex flex-col items-start gap-2 bg-zinc-900/20 dark:bg-zinc-800/30 p-6 rounded-xl border border-zinc-700 hover:shadow-md transition-shadow backdrop-blur-sm hover:scale-[1.01]"
+              className="flex flex-col items-start gap-2 p-6 border border-gray-300 dark:border-gray-700 rounded-xl hover:shadow-md transition-shadow backdrop-blur-sm hover:scale-[1.01]"
             >
               <h3 className="text-lg sm:text-xl font-semibold text-brand-orange flex items-center gap-2">
                 <span>{card.emoji}</span>
                 {card.title}
               </h3>
-              <p className="text-left text-sm sm:text-base text-gray-300 font-sans leading-relaxed">
+              <p className="text-left text-sm sm:text-base font-sans leading-relaxed">
                 {card.content}
               </p>
             </motion.div>
@@ -81,7 +81,7 @@ export default function About() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
           viewport={{ once: true }}
-          className="text-xl sm:text-2xl italic text-gray-400 pt-12 border-t border-dashed border-gray-600 w-full text-center max-w-3xl"
+          className="text-xl sm:text-2xl italic font-mono pt-12 border-t border-dashed border-gray-600 w-full text-center max-w-3xl"
         >
           “Behind every great product is a backend that quietly holds the chaos together.”
         </motion.p>

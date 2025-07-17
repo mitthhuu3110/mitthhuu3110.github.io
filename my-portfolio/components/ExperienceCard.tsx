@@ -53,7 +53,7 @@ export default function ExperienceCard({
         {exp.bullets.map((point, i) => (
           <li
             key={i}
-            className="text-sm leading-relaxed text-gray-300 dark:text-gray-300"
+            className="text-sm leading-relaxed"
           >
             {point}
           </li>
