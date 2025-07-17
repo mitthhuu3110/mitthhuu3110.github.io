@@ -16,7 +16,7 @@ export default function Hero() {
         className="max-w-3xl space-y-6"
       >
         <h1 className="text-3xl sm:text-4xl font-extrabold font-sans tracking-wide text-brand-orange">
-          Hi, I'm Mithilesh Charan 👋
+          Hi, I&apos;m Mithilesh Charan 👋
         </h1>
 
         <p className="text-sm sm:text-base text-gray-600 dark:text-gray-400 font-mono tracking-wide">

@@ -3,7 +3,6 @@
 import { achievements, Achievement } from '@/data/achievements';
 import { ExternalLink } from 'lucide-react';
 import { motion } from 'framer-motion';
-import Image from 'next/image';
 
 export default function Achievements() {
   return (

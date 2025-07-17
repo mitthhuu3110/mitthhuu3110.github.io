@@ -7,18 +7,18 @@ import { Github } from 'lucide-react';
 import { usePathname } from 'next/navigation';
 import { useEffect, useState } from 'react';
 
+const scrollItems = [
+  { id: 'about', label: 'About' },
+  { id: 'experience', label: 'Experience' },
+  { id: 'skills', label: 'Skills' },
+  { id: 'projects', label: 'Projects' },
+  { id: 'achievements', label: 'Achievements' },
+  { id: 'catchup', label: 'CatchUp' },
+];
+
 export default function Navbar() {
   const pathname = usePathname();
   const isHome = pathname === '/';
-
-  const scrollItems = [
-    { id: 'about', label: 'About' },
-    { id: 'experience', label: 'Experience' },
-    { id: 'skills', label: 'Skills' },
-    { id: 'projects', label: 'Projects' },
-    { id: 'achievements', label: 'Achievements' },
-    { id: 'catchup', label: 'CatchUp' },
-  ];
 
   const [activeSection, setActiveSection] = useState('about');
 
