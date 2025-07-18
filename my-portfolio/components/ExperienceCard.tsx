@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { Experience } from '@/data/experience';
-import { Briefcase, MapPin, CalendarDays } from 'lucide-react';
+import { Briefcase, MapPin} from 'lucide-react';
 
 export default function ExperienceCard({
   exp,

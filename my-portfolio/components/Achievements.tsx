@@ -1,8 +1,9 @@
 'use client';
 
-import { achievements, Achievement } from '@/data/achievements';
+import { achievements } from '@/data/achievements';
 import { ExternalLink } from 'lucide-react';
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 
 export default function Achievements() {
   return (
@@ -23,10 +24,8 @@ export default function Achievements() {
 
         <div className="w-full flex flex-col gap-6 md:gap-10">
           {achievements.map((item, idx) => {
-            // Detect if GCP to insert logos or highlight
             const isGCP = item.issuer.includes('Google Cloud');
 
-            // Check if title includes the certification we want to highlight
             const highlightedTitle = item.title.includes('Associate Cloud Engineer')
               ? item.title.replace(
                   'Associate Cloud Engineer',
@@ -59,7 +58,13 @@ export default function Achievements() {
                 <div className="flex items-center gap-2 text-sm text-gray-500 italic font-mono">
                   {item.issuer}
                   {isGCP && (
-                    <img src="/icons/gcp.svg" alt="GCP logo" className="w-4 h-4" />
+                    <Image
+                      src="/icons/gcp.svg"
+                      alt="GCP logo"
+                      width={16}
+                      height={16}
+                      className="w-4 h-4"
+                    />
                   )}
                 </div>
 
