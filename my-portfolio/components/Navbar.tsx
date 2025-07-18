@@ -88,7 +88,7 @@ export default function Navbar() {
               height={28}
               className="rounded-sm"
             />
-            mithu-dev
+            charan.dev
           </Link>
         </div>
 
