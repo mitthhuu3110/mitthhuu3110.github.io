@@ -12,9 +12,8 @@ export default function ProjectCard({
   index: number;
   isFeatured?: boolean;
 }) {
-  // Check if the title should be orange
   const isOrangeTitle =
-    project.title.includes('PAM') || project.title.includes('CSA') || project.title.includes('ClarityLedger');
+    project.title.includes('PAM') || project.title.includes('CSA');
 
   return (
     <motion.div
@@ -47,8 +46,8 @@ export default function ProjectCard({
         ))}
       </div>
 
-      {/* Bullet Points */}
-      <ul className="list-disc list-outside pl-6 space-y-1 pt-2 text-[color:var(--base)] text-sm sm:text-base leading-relaxed">
+      {/* Bullet Points - updated to unordered */}
+      <ul className="list-disc list-outside pl-6 space-y-2 pt-2 text-[color:var(--base)] text-sm sm:text-base leading-relaxed text-left">
         {project.description.map((point, idx) => (
           <li key={idx}>{point}</li>
         ))}

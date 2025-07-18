@@ -6,8 +6,8 @@ const cards = [
   {
     emoji: '💼',
     title: 'Where I work ?',
-    content: 
-      'I work at Ford as a Software Engineer. Continuously learning and shipping projects that I am involved here.' 
+    content:
+      'I work at Ford as a Software Engineer. Continuously learning and shipping projects that I am involved here.',
   },
   {
     emoji: '🎓',
@@ -38,16 +38,16 @@ const cards = [
     title: 'Outside of Code ?',
     content:
       'I write, tour, play sports, solve puzzles, and ideate side projects with a sip of coffee ☕️ — it’s my reset button.',
-  }
+  },
 ];
 
 export default function About() {
   return (
     <section
       id="about"
-      className="w-full flex flex-col items-center justify-center py-5 px-6 text-[color:var(--base)]"
+      className="w-full flex flex-col items-center justify-center py-10 px-6 sm:px-10 md:px-16 text-[color:var(--base)]"
     >
-      <div className="max-w-5xl w-full flex flex-col items-center text-center space-y-12">
+      <div className="max-w-6xl w-full flex flex-col items-center text-center space-y-12">
         {/* Heading */}
         <motion.h2
           initial={{ opacity: 0, y: -10 }}
@@ -56,11 +56,11 @@ export default function About() {
           viewport={{ once: true }}
           className="text-3xl sm:text-4xl font-bold text-brand-orange"
         >
-          Who I Am, What I Build
+          Who I Am & What I Build
         </motion.h2>
 
-        {/* Cards grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 md:gap-8 w-full">
+        {/* Cards Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 md:gap-10 w-full">
           {cards.map((card, idx) => (
             <motion.div
               key={idx}
@@ -68,13 +68,14 @@ export default function About() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: idx * 0.1 }}
               viewport={{ once: true }}
-              className="flex flex-col items-start gap-2 p-6 border border-gray-300 dark:border-gray-700 rounded-xl hover:shadow-md transition-shadow backdrop-blur-sm hover:scale-[1.01]"
+              className="rounded-2xl p-6 sm:p-8 space-y-3 border border-zinc-300 dark:border-zinc-700 
+                backdrop-blur-sm hover:shadow-[0_4px_20px_rgba(255,115,0,0.15)] transition-shadow duration-300 text-left"
             >
               <h3 className="text-lg sm:text-xl font-semibold text-brand-orange flex items-center gap-2">
                 <span>{card.emoji}</span>
                 {card.title}
               </h3>
-              <p className="text-left text-sm sm:text-base font-sans leading-relaxed">
+              <p className="text-sm sm:text-base font-sans leading-relaxed text-[color:var(--base)]">
                 {card.content}
               </p>
             </motion.div>

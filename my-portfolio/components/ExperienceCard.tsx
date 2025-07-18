@@ -11,84 +11,76 @@ export default function ExperienceCard({
   exp: Experience;
   index: number;
 }) {
-  const isHighlightedTitle =
-    exp.bullets.some(b =>
-      b.includes('Privileged Access Manager') || b.includes('Central Shutdown Automation')
-    );
-
   return (
     <motion.div
-      initial={{ opacity: 0, scale: 0.95 }}
-      whileInView={{ opacity: 1, scale: 1 }}
-      transition={{ duration: 0.5, ease: 'easeOut' }}
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5, delay: index * 0.1 }}
       viewport={{ once: true }}
-      className="w-full px-6 py-6 bg-[color:var(--bg)] text-[color:var(--base)] border border-gray-300 dark:border-gray-700 rounded-xl shadow transition-shadow duration-300 hover:shadow-lg"
+      className="rounded-2xl p-6 sm:p-8 space-y-4 border border-zinc-300 dark:border-zinc-700 
+        backdrop-blur-sm hover:shadow-[0_4px_20px_rgba(255,115,0,0.15)] transition-shadow duration-300"
     >
-      <div className="flex flex-col gap-2 mb-2">
-        <h3
-          className={`text-lg font-semibold flex items-center gap-2 ${
-            isHighlightedTitle ? 'text-brand-orange' : ''
-          }`}
-        >
-          <Briefcase className="w-4 h-4 text-brand-orange" /> {exp.role}
+      {/* Title + Duration Row */}
+      <div className="flex items-start justify-between">
+        <h3 className="text-xl sm:text-2xl font-bold font-sans text-[color:var(--base)] flex items-center gap-2">
+          <Briefcase className="w-5 h-5 text-brand-orange" />
+          {exp.role}
         </h3>
-        <p className="text-sm text-gray-600 dark:text-gray-400 font-mono">{exp.company}</p>
-        <div className="flex items-center gap-4 text-xs text-gray-500 dark:text-gray-400">
+        <span className="text-xs sm:text-sm font-mono text-gray-500 dark:text-gray-400 mt-1 whitespace-nowrap">
+          {exp.duration}
+        </span>
+      </div>
+
+      {/* Company + Location */}
+      <div className="text-left space-y-1 pl-7">
+        <p className="text-sm text-gray-500 italic font-mono">{exp.company}</p>
+        <div className="flex flex-wrap items-center gap-4 text-xs text-gray-500 dark:text-gray-400">
           <span className="flex items-center gap-1">
-            <MapPin className="w-4 h-4 text-brand-orange" /> {exp.location}
-          </span>
-          <span className="flex items-center gap-1 italic">
-            <CalendarDays className="w-4 h-4 text-brand-orange" /> {exp.duration}
+            <MapPin className="w-4 h-4 text-brand-orange" />
+            {exp.location}
           </span>
         </div>
       </div>
 
-      <div className="flex flex-wrap gap-2 mt-3">
-        {extractTechKeywords(exp.bullets).map((keyword, i) => (
+      {/* Tech Stack Tags */}
+      <div className="flex flex-wrap gap-2 pt-1">
+        {extractTechKeywords(exp.bullets).map((tech, i) => (
           <span
             key={i}
-            className="text-xs font-mono bg-brand-orange/90 text-white rounded-md px-2 py-[2px]"
+            className="bg-zinc-200 dark:bg-zinc-700/50 text-xs px-3 py-1 rounded-full font-mono text-orange-500 dark:text-orange-300"
           >
-            {keyword}
+            {tech}
           </span>
         ))}
       </div>
 
-      <ul className="mt-4 space-y-2 pl-4 list-disc marker:text-brand-orange text-sm leading-relaxed">
-        {exp.bullets.map((point, i) => (
-          <li key={i} className="text-[color:var(--base)]">{point}</li>
+      {/* Bullet Points */}
+      <ul className="list-disc list-outside pl-6 space-y-1 pt-2 text-[color:var(--base)] text-sm sm:text-base leading-relaxed text-left">
+        {exp.bullets.map((point, idx) => (
+          <li key={idx}>{point}</li>
         ))}
       </ul>
     </motion.div>
   );
 }
 
+// Utility to extract tech skills
 function extractTechKeywords(bullets: string[]): string[] {
   const techSet = new Set<string>();
-  const keywords = [
-    'Java - Spring Boot',
-    'Python',
-    'REST APIs',
-    'PostgreSQL',
-    'Secret Manager',
-    'Kubernetes',
-    'Flask',
-    'Apigee',
-    'Swagger',
-    'Dialogflow',
-    'spaCy',
-    'GPT',
-    'Elasticsearch',
-    'AWS',
-    'GKE',
-    'React',
-    'JUnit',
-    'PyTest',
+  const techKeywords = [
+    'Java', 'Spring Boot', 'Python', 'Flask', 'React',
+    'PostgreSQL', 'REST APIs', 'Kubernetes', 'GKE', 'AWS',
+    'Secret Manager', 'Swagger', 'Apigee', 'GPT', 'spaCy',
+    'Dialogflow', 'Elasticsearch'
   ];
+
   bullets.forEach((point) => {
-    keywords.forEach((tech) => {
-      if (point.includes(tech)) techSet.add(tech);
+    techKeywords.forEach((keyword) => {
+      if (point.includes(keyword)) {
+        techSet.add(keyword);
+      }
     });
   });
+
   return Array.from(techSet);
 }

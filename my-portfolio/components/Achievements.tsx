@@ -10,53 +10,80 @@ export default function Achievements() {
       id="achievements"
       className="w-full flex flex-col items-center justify-center py-10 px-6 sm:px-10 md:px-16 text-[color:var(--base)]"
     >
-      <div className="max-w-3xl w-full text-center">
+      <div className="max-w-6xl w-full flex flex-col items-center text-center space-y-12">
         <motion.h2
-          initial={{ opacity: 0, y: -20 }}
+          initial={{ opacity: 0, y: 10 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="text-3xl sm:text-4xl font-bold text-brand-orange mb-10"
+          viewport={{ once: true }}
+          className="text-3xl sm:text-4xl font-bold font-sans text-brand-orange"
         >
           Achievements & Certifications 🏅
         </motion.h2>
 
-        <div className="space-y-10">
-          {achievements.map((item: Achievement, idx: number) => (
-            <motion.div
-              key={idx}
-              initial={{ opacity: 0, scale: 0.95 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.4, delay: idx * 0.1 }}
-              className="border border-gray-300 dark:border-gray-700 rounded-xl p-6 space-y-3 hover:shadow-lg transition-all bg-[color:var(--bg)] text-[color:var(--base)]"
-            >
-              <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-2">
-                <div className="flex items-center gap-3">
-                  <div className="text-left">
-                    <h3 className="text-lg font-semibold">{item.title}</h3>
-                    <p className="text-sm text-gray-600 dark:text-gray-400 font-mono">{item.issuer}</p>
-                  </div>
+        <div className="w-full flex flex-col gap-6 md:gap-10">
+          {achievements.map((item, idx) => {
+            // Detect if GCP to insert logos or highlight
+            const isGCP = item.issuer.includes('Google Cloud');
+
+            // Check if title includes the certification we want to highlight
+            const highlightedTitle = item.title.includes('Associate Cloud Engineer')
+              ? item.title.replace(
+                  'Associate Cloud Engineer',
+                  `<span class='text-brand-orange'>Associate Cloud Engineer</span>`
+                )
+              : item.title;
+
+            return (
+              <motion.div
+                key={idx}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: idx * 0.1 }}
+                viewport={{ once: true }}
+                className="rounded-2xl p-6 sm:p-8 space-y-4 border border-zinc-300 dark:border-zinc-700 
+                  backdrop-blur-sm hover:shadow-[0_4px_20px_rgba(255,115,0,0.15)] transition-shadow duration-300 text-left"
+              >
+                {/* Title + Date */}
+                <div className="flex justify-between items-start">
+                  <h3
+                    className="text-xl sm:text-2xl font-bold font-sans text-[color:var(--base)]"
+                    dangerouslySetInnerHTML={{ __html: highlightedTitle }}
+                  />
+                  <p className="text-xs sm:text-sm font-mono text-gray-500 dark:text-gray-400 mt-1 whitespace-nowrap">
+                    {item.date}
+                  </p>
                 </div>
-                <p className="text-sm text-gray-500 italic font-mono">{item.date}</p>
-              </div>
-              <ul className="list-disc list-inside space-y-1 text-left">
-                {item.description.map((point: string, idx2: number) => (
-                  <li key={idx2} className="text-base leading-relaxed">
-                    {point}
-                  </li>
-                ))}
-              </ul>
-              {item.link && (
-                <a
-                  href={item.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center text-sm text-brand-orange hover:underline pt-2"
-                >
-                  View Credential <ExternalLink className="ml-1 w-4 h-4" />
-                </a>
-              )}
-            </motion.div>
-          ))}
+
+                {/* Issuer with optional logo */}
+                <div className="flex items-center gap-2 text-sm text-gray-500 italic font-mono">
+                  {item.issuer}
+                  {isGCP && (
+                    <img src="/icons/gcp.svg" alt="GCP logo" className="w-4 h-4" />
+                  )}
+                </div>
+
+                {/* Bullet Points */}
+                <ul className="list-disc list-outside pl-6 space-y-1 pt-1 text-[color:var(--base)] text-sm sm:text-base leading-relaxed">
+                  {item.description.map((point, idx2) => (
+                    <li key={idx2}>{point}</li>
+                  ))}
+                </ul>
+
+                {/* Credential Link */}
+                {item.link && (
+                  <a
+                    href={item.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center text-sm text-brand-orange hover:underline pt-2"
+                  >
+                    View Credential <ExternalLink className="ml-1 w-4 h-4" />
+                  </a>
+                )}
+              </motion.div>
+            );
+          })}
         </div>
       </div>
     </section>

@@ -1,8 +1,6 @@
-// components/Experience.tsx
 'use client';
 
 import { experiences } from '@/data/experience';
-import type { Experience as ExperienceType } from '@/data/experience';
 import ExperienceCard from './ExperienceCard';
 import { motion } from 'framer-motion';
 
@@ -23,9 +21,9 @@ export default function ExperienceSection() {
           Experience
         </motion.h2>
 
-        <div className="w-full grid sm:grid-cols-2 gap-6 md:gap-10">
-          {experiences.map((exp, idx) => (
-            <ExperienceCard key={idx} exp={exp} index={idx} />
+        <div className="w-full flex flex-col gap-6 md:gap-10">
+          {experiences.map((exp, index) => (
+            <ExperienceCard key={index} exp={exp} index={index} />
           ))}
         </div>
       </div>
