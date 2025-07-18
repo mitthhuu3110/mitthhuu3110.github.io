@@ -7,19 +7,19 @@ const cards = [
     emoji: '💼',
     title: 'Where I work ?',
     content:
-      'I work at Ford as a Software Engineer. Continuously learning and shipping projects that I am involved here.',
+      'I work at Ford as a Software Engineer. Continuously learning and shipping products that are crucial for Enterprise Technology.',
   },
   {
     emoji: '🎓',
     title: 'Where I Graduated ?',
     content:
-      'Graduated from NIT Raipur in 2024 with a CGPA of 8.5 in Computer Science & Engineering. Always learning, always building.',
+      'Graduated from NIT (National Institute of Technology), Raipur in 2024 with a CGPA of 8.5 in Computer Science & Engineering.',
   },
   {
     emoji: '🛠️',
     title: 'What I Work With ?',
     content:
-      'Java - Spring Boot, Python, PostgreSQL, Kubernetes, AWS, Docker, GitHub Actions, and Terraform — all in my toolkit for Backend & DevOps.',
+      'Java - Spring Boot, Python, PostgreSQL, Kubernetes, AWS, Docker, GitHub Actions, and Terraform, AI Agents — all in my toolkit for Backend & DevOps.',
   },
   {
     emoji: '🧠',
@@ -56,7 +56,7 @@ export default function About() {
           viewport={{ once: true }}
           className="text-3xl sm:text-4xl font-bold text-brand-orange"
         >
-          Who I Am & What I Build
+          About me
         </motion.h2>
 
         {/* Cards Grid */}

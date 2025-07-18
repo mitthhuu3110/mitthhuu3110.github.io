@@ -45,7 +45,7 @@ export default function Hero() {
             Building scalable systems that are efficient, secure, and built for performance. Passionate about automating the manual efforts so teams can focus on what matters at Ford 🚀
           </p>
 
-          <p className="mb-2">Currently obsessed with 👇</p>
+          <p className="mb-2">Working with 👇</p>
           <div className="flex flex-wrap gap-2 pt-1">
             {[
               'Java - Spring Boot',

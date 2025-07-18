@@ -13,7 +13,7 @@ export default function ProjectCard({
   isFeatured?: boolean;
 }) {
   const isOrangeTitle =
-    project.title.includes('PAM') || project.title.includes('CSA');
+    project.title.includes('MAP') || project.title.includes('ASC');
 
   return (
     <motion.div
