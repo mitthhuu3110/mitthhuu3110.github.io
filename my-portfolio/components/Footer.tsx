@@ -22,7 +22,7 @@ export default function Footer() {
         <span className="hidden sm:inline">|</span>
 
         <Link
-          href="https://www.linkedin.com/in/mithilesh-perugu-5a1726236/"
+          href="https://www.linkedin.com/in/mithilesh-charan-perugu-5a1726236/"
           target="_blank"
           className="flex items-center gap-1 hover:underline"
         >

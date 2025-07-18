@@ -52,7 +52,7 @@ export default function CatchUp() {
 
           <motion.a
             whileHover={{ scale: 1.03 }}
-            href="https://linkedin.com/in/mithilesh-perugu-5a1726236/"
+            href="https://www.linkedin.com/in/mithilesh-charan-perugu-5a1726236/"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-4 w-full sm:w-[320px] border border-gray-300 dark:border-gray-700 px-5 py-4 rounded-lg hover:shadow-lg transition-all dark:bg-[color:var(--bg)]"

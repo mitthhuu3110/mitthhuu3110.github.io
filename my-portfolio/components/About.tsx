@@ -4,42 +4,48 @@ import { motion } from 'framer-motion';
 
 const cards = [
   {
-    emoji: '🧠',
-    title: 'What I’m Great At',
-    content:
-      'Designing scalable APIs, building robust backend systems, and shipping clean, production-grade code with performance in mind.',
-  },
-  {
-    emoji: '🛠️',
-    title: 'What I Work With',
-    content:
-      'Java, Spring Boot, Docker, GCP, Kubernetes, Python, GitHub Actions, and Terraform — all in my toolkit for backend & DevOps.',
-  },
-  {
-    emoji: '🚀',
-    title: 'How I Build',
-    content:
-      'I start with clarity, design with simplicity, and ship fast. I believe great backend systems should be invisible and reliable.',
+    emoji: '💼',
+    title: 'Where I work ?',
+    content: 
+      'I work at Ford as a Software Engineer. Continuously learning and shipping projects that I am involved here.' 
   },
   {
     emoji: '🎓',
-    title: 'Where I Graduated',
+    title: 'Where I Graduated ?',
     content:
       'Graduated from NIT Raipur in 2024 with a CGPA of 8.5 in Computer Science & Engineering. Always learning, always building.',
   },
   {
-    emoji: '🧩',
-    title: 'Outside of Code',
+    emoji: '🛠️',
+    title: 'What I Work With ?',
     content:
-      'I write, explore bikes, type at 130+ WPM, and ideate side projects over cold coffee ☕️ — it’s my reset button.',
+      'Java - Spring Boot, Python, PostgreSQL, Kubernetes, AWS, Docker, GitHub Actions, and Terraform — all in my toolkit for Backend & DevOps.',
   },
+  {
+    emoji: '🧠',
+    title: 'What I’m Great At ?',
+    content:
+      'Designing scalable APIs, building robust backend systems, and shipping clean, production-grade code with performance in mind.',
+  },
+  {
+    emoji: '🚀',
+    title: 'How I Build ?',
+    content:
+      'I start with clarity, design with simplicity, and ship fast. I believe great backend systems should be invisible and reliable.',
+  },
+  {
+    emoji: '🧩',
+    title: 'Outside of Code ?',
+    content:
+      'I write, tour, play sports, solve puzzles, and ideate side projects with a sip of coffee ☕️ — it’s my reset button.',
+  }
 ];
 
 export default function About() {
   return (
     <section
       id="about"
-      className="w-full flex flex-col items-center justify-center py-24 px-6 sm:px-10 md:px-16 text-[color:var(--base)]"
+      className="w-full flex flex-col items-center justify-center py-10 px-6 text-[color:var(--base)]"
     >
       <div className="max-w-5xl w-full flex flex-col items-center text-center space-y-12">
         {/* Heading */}
@@ -81,7 +87,7 @@ export default function About() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
           viewport={{ once: true }}
-          className="text-xl sm:text-2xl italic font-mono pt-12 border-t border-dashed border-gray-600 w-full text-center max-w-3xl"
+          className="text-xl sm:text-2xl italic font-mono pt-10 border-t border-dashed border-gray-600 w-full text-center max-w-3xl"
         >
           “Behind every great product is a backend that quietly holds the chaos together.”
         </motion.p>
