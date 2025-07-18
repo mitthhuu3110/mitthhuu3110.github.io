@@ -9,7 +9,7 @@ export default function Projects() {
   return (
     <section
       id="projects"
-      className="w-full flex flex-col items-center justify-center py-24 px-6 sm:px-10 md:px-16 text-[color:var(--base)]"
+      className="w-full flex flex-col items-center justify-center py-10 px-6 sm:px-10 md:px-16 text-[color:var(--base)]"
     >
       <div className="max-w-4xl w-full flex flex-col items-center text-center space-y-12">
         <motion.h2

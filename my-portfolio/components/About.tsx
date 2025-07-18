@@ -45,7 +45,7 @@ export default function About() {
   return (
     <section
       id="about"
-      className="w-full flex flex-col items-center justify-center py-10 px-6 text-[color:var(--base)]"
+      className="w-full flex flex-col items-center justify-center py-5 px-6 text-[color:var(--base)]"
     >
       <div className="max-w-5xl w-full flex flex-col items-center text-center space-y-12">
         {/* Heading */}
@@ -54,7 +54,7 @@ export default function About() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
           viewport={{ once: true }}
-          className="text-3xl sm:text-4xl font-extrabold text-brand-orange"
+          className="text-3xl sm:text-4xl font-bold text-brand-orange"
         >
           Who I Am, What I Build
         </motion.h2>

@@ -64,7 +64,7 @@ export default function Skills() {
   return (
     <motion.section
       id="skills"
-      className="w-full flex flex-col items-center justify-center py-20 px-4 sm:px-8 md:px-16 text-[color:var(--base)]"
+      className="w-full flex flex-col items-center justify-center py-10 px-4 sm:px-8 md:px-16 text-[color:var(--base)]"
       initial={{ opacity: 0, y: 30 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6, ease: 'easeOut' }}

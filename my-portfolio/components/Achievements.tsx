@@ -8,7 +8,7 @@ export default function Achievements() {
   return (
     <section
       id="achievements"
-      className="w-full flex flex-col items-center justify-center py-20 px-6 sm:px-10 md:px-16 text-[color:var(--base)]"
+      className="w-full flex flex-col items-center justify-center py-10 px-6 sm:px-10 md:px-16 text-[color:var(--base)]"
     >
       <div className="max-w-3xl w-full text-center">
         <motion.h2
