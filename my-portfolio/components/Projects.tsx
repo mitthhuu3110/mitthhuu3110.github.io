@@ -21,7 +21,7 @@ export default function Projects() {
           Projects
         </motion.h2>
 
-        <div className="w-full grid sm:grid-cols-2 gap-6 md:gap-10">
+        <div className="w-full grid grid-cols-1 sm:grid-cols-2 gap-6 md:gap-10">
           {projects.map((project, index) => (
             <ProjectCard
               key={index}

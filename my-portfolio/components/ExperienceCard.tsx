@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { Experience } from '@/data/experience';
-import { Briefcase, MapPin} from 'lucide-react';
+import { Briefcase, MapPin } from 'lucide-react';
 
 export default function ExperienceCard({
   exp,
@@ -17,22 +17,22 @@ export default function ExperienceCard({
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, delay: index * 0.1 }}
       viewport={{ once: true }}
-      className="rounded-2xl p-6 sm:p-8 space-y-4 border border-zinc-300 dark:border-zinc-700 
+      className="rounded-2xl p-5 sm:p-8 space-y-4 border border-zinc-300 dark:border-zinc-700 
         backdrop-blur-sm hover:shadow-[0_4px_20px_rgba(255,115,0,0.15)] transition-shadow duration-300"
     >
-      {/* Title + Duration Row */}
-      <div className="flex items-start justify-between">
+      {/* Title + Duration */}
+      <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1">
         <h3 className="text-xl sm:text-2xl font-bold font-sans text-[color:var(--base)] flex items-center gap-2">
           <Briefcase className="w-5 h-5 text-brand-orange" />
           {exp.role}
         </h3>
-        <span className="text-xs sm:text-sm font-mono text-gray-500 dark:text-gray-400 mt-1 whitespace-nowrap">
+        <span className="text-xs sm:text-sm font-mono text-gray-500 dark:text-gray-400 whitespace-nowrap">
           {exp.duration}
         </span>
       </div>
 
       {/* Company + Location */}
-      <div className="text-left space-y-1 pl-7">
+      <div className="text-left space-y-1 pl-[26px]">
         <p className="text-sm text-gray-500 italic font-mono">{exp.company}</p>
         <div className="flex flex-wrap items-center gap-4 text-xs text-gray-500 dark:text-gray-400">
           <span className="flex items-center gap-1">

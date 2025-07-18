@@ -45,7 +45,7 @@ export default function About() {
   return (
     <section
       id="about"
-      className="w-full flex flex-col items-center justify-center py-10 px-6 sm:px-10 md:px-16 text-[color:var(--base)]"
+      className="w-full flex flex-col items-center justify-center py-10 px-4 sm:px-10 md:px-16 text-[color:var(--base)]"
     >
       <div className="max-w-6xl w-full flex flex-col items-center text-center space-y-12">
         {/* Heading */}
@@ -60,7 +60,7 @@ export default function About() {
         </motion.h2>
 
         {/* Cards Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 md:gap-10 w-full">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 w-full">
           {cards.map((card, idx) => (
             <motion.div
               key={idx}
@@ -68,7 +68,7 @@ export default function About() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: idx * 0.1 }}
               viewport={{ once: true }}
-              className="rounded-2xl p-6 sm:p-8 space-y-3 border border-zinc-300 dark:border-zinc-700 
+              className="rounded-2xl p-5 sm:p-6 space-y-3 border border-zinc-300 dark:border-zinc-700 
                 backdrop-blur-sm hover:shadow-[0_4px_20px_rgba(255,115,0,0.15)] transition-shadow duration-300 text-left"
             >
               <h3 className="text-lg sm:text-xl font-semibold text-brand-orange flex items-center gap-2">
@@ -88,7 +88,7 @@ export default function About() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
           viewport={{ once: true }}
-          className="text-xl sm:text-2xl italic font-mono pt-10 border-t border-dashed border-gray-600 w-full text-center max-w-3xl"
+          className="text-base sm:text-xl italic font-mono pt-8 sm:pt-10 border-t border-dashed border-gray-600 w-full max-w-3xl mx-auto text-center"
         >
           “Behind every great product is a backend that quietly holds the chaos together.”
         </motion.p>

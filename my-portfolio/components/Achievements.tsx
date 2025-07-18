@@ -9,7 +9,7 @@ export default function Achievements() {
   return (
     <section
       id="achievements"
-      className="w-full flex flex-col items-center justify-center py-10 px-6 sm:px-10 md:px-16 text-[color:var(--base)]"
+      className="w-full flex flex-col items-center justify-center py-10 px-4 sm:px-10 md:px-16 text-[color:var(--base)]"
     >
       <div className="max-w-6xl w-full flex flex-col items-center text-center space-y-12">
         <motion.h2
@@ -40,22 +40,22 @@ export default function Achievements() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: idx * 0.1 }}
                 viewport={{ once: true }}
-                className="rounded-2xl p-6 sm:p-8 space-y-4 border border-zinc-300 dark:border-zinc-700 
+                className="rounded-2xl p-5 sm:p-8 space-y-4 border border-zinc-300 dark:border-zinc-700 
                   backdrop-blur-sm hover:shadow-[0_4px_20px_rgba(255,115,0,0.15)] transition-shadow duration-300 text-left"
               >
                 {/* Title + Date */}
-                <div className="flex justify-between items-start">
+                <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-2">
                   <h3
-                    className="text-xl sm:text-2xl font-bold font-sans text-[color:var(--base)]"
+                    className="text-lg sm:text-2xl font-bold font-sans text-[color:var(--base)]"
                     dangerouslySetInnerHTML={{ __html: highlightedTitle }}
                   />
-                  <p className="text-xs sm:text-sm font-mono text-gray-500 dark:text-gray-400 mt-1 whitespace-nowrap">
+                  <p className="text-xs sm:text-sm font-mono text-gray-500 dark:text-gray-400 mt-1 sm:mt-0 whitespace-nowrap">
                     {item.date}
                   </p>
                 </div>
 
                 {/* Issuer with optional logo */}
-                <div className="flex items-center gap-2 text-sm text-gray-500 italic font-mono">
+                <div className="flex items-center gap-2 text-sm text-gray-500 italic font-mono flex-wrap">
                   {item.issuer}
                   {isGCP && (
                     <Image
@@ -69,7 +69,7 @@ export default function Achievements() {
                 </div>
 
                 {/* Bullet Points */}
-                <ul className="list-disc list-outside pl-6 space-y-1 pt-1 text-[color:var(--base)] text-sm sm:text-base leading-relaxed">
+                <ul className="list-disc list-outside pl-6 space-y-2 pt-1 text-[color:var(--base)] text-sm sm:text-base leading-relaxed">
                   {item.description.map((point, idx2) => (
                     <li key={idx2}>{point}</li>
                   ))}

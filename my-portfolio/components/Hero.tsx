@@ -31,9 +31,7 @@ export default function Hero() {
 
         {/* Role tags */}
         <div className="inline-flex items-center justify-center gap-4 text-base sm:text-lg font-mono px-4 py-2 text-gray-700 dark:text-gray-300 tracking-wide">
-          <span>Software Engineer</span>
-          <span className="opacity-50">•</span>
-          <span>Backend Developer</span>
+          <span>Backend Engineer</span>
           <span className="opacity-50">•</span>
           <span>DevOps & Cloud Enthusiast 💭</span>
         </div>
