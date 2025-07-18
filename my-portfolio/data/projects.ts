@@ -7,6 +7,15 @@ export interface Project {
 
 export const projects: Project[] = [
   {
+    title: "ClarityLedger – Personal Budgeting & Forecasting System",
+    techStack: "Spring Boot, PostgreSQL, React, Docker, GCP",
+    description: [
+      "Designed backend architecture for user authentication, expense tracking, and budget goal management using Spring Boot, JWT, PostgreSQL.",
+      "Built REST APIs for CRUD operations, recurring transactions, and category-wise analytics; containerized via Docker and deployed on GCP.",
+      "Implemented modular code structure with separation of concerns and planned CI/CD pipeline using GitHub Actions.",
+    ],
+  },
+  {
     title: "CERTMAN – SSL Certificate Renewal Automation",
     techStack: "Python, REST APIs, AWS Secret Manager, React",
     description: [
@@ -23,15 +32,6 @@ export const projects: Project[] = [
       "Reduced cloud infrastructure costs by 25%+ with centralized, rule-based scheduling logic and intuitive web UI.",
       "Built dashboards to visualize real-time VM states and historical activity logs for audit and optimization insights."
     ]
-  },
-  {
-    title: "ClarityLedger – Personal Budgeting & Forecasting System",
-    techStack: "Spring Boot, PostgreSQL, React, Docker, GCP",
-    description: [
-      "Designed backend architecture for user authentication, expense tracking, and budget goal management using Spring Boot, JWT, PostgreSQL.",
-      "Built REST APIs for CRUD operations, recurring transactions, and category-wise analytics; containerized via Docker and deployed on GCP.",
-      "Implemented modular code structure with separation of concerns and planned CI/CD pipeline using GitHub Actions.",
-    ],
   },
   {
     title: "PAM – Privileged Access Manager",
