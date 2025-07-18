@@ -65,7 +65,7 @@ export default function Unplugged() {
           <h2 className="text-xl font-semibold font-mono text-brand-orange">👨‍🍳 Cooking</h2>
           <div className="border-t border-dashed border-gray-400 my-2 w-11/12" />
           <p className="text-base leading-relaxed w-11/12">
-            People say I cook well. And they also say I only cook Non-veg well 😅. Chicken Biryani, Kebabs, Starters, Curries etc. Hmm.. I should learn cooking veg too.. maybe one day. 
+            People say I cook well 🍳. And they also say I only cook Non-veg well 😅. Chicken Biryani, Kebabs, Starters, Curries etc. Hmm.. I should learn cooking veg too.. maybe one day. 
           </p>
         </section>
 
@@ -83,7 +83,7 @@ export default function Unplugged() {
           <h2 className="text-xl font-semibold font-mono text-brand-orange">🧪 New Experiments</h2>
           <div className="border-t border-dashed border-gray-400 my-2 w-11/12" />
           <p className="text-base leading-relaxed w-11/12">
-            Next up: learning Guitar (don’t laugh), maybe 3D printing, and definitely more touring with biker gangs.
+            Next up: learning Guitar 🎸 (don’t laugh), maybe 3D printing, animation, snooker 🎱, boxing 🥊 etc.
           </p>
         </section>
 
