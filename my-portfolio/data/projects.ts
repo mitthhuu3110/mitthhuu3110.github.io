@@ -7,21 +7,11 @@ export interface Project {
 
 export const projects: Project[] = [
   {
-    title: "ClarityLedger – Personal Budgeting & Forecasting System",
-    techStack: "Spring Boot, PostgreSQL, React, Docker, GCP",
+    title: "Webhook Replay & Debugging System",
+    techStack: "Spring Boot, PostgreSQL, REST APIs, Docker, AWS",
     description: [
-      "Designed backend architecture for user authentication, expense tracking, and budget goal management using Spring Boot, JWT, PostgreSQL.",
-      "Built REST APIs for CRUD operations, recurring transactions, and category-wise analytics; containerized via Docker and deployed on GCP.",
-      "Implemented modular code structure with separation of concerns and planned CI/CD pipeline using GitHub Actions.",
-    ],
-  },
-  {
-    title: "CERTMAN – SSL Certificate Renewal Automation",
-    techStack: "Python, REST APIs, AWS Secret Manager, React",
-    description: [
-      "Automated SSL/TLS cert expiration monitoring for 1000+ .ford.com domains with daily scans, email/text alerts, and dashboard tracking.",
-      "Enabled CSR generation, CA approval workflows and delivery of certificates + private keys for Certman-based apps.",
-      "Supported onboarding for internal and external certs, reducing manual effort and outages by 60%+ across teams.",
+      "Tailored a backend tool to capture, log, and replay webhook payloads, enabling 80% better visibility into external service callbacks for debugging.",
+      "Enabled replay of 900+ simulated webhook events with custom headers, delays, and payloads to mimic real-world integrations and test failure scenarios.",
     ],
   },
   {
@@ -30,17 +20,26 @@ export const projects: Project[] = [
     description: [
       "Developed automation for managing VM lifecycle during weekends/holidays, integrated user scheduling for shutdown/startup.",
       "Reduced cloud infrastructure costs by 25%+ with centralized, rule-based scheduling logic and intuitive web UI.",
-      "Built dashboards to visualize real-time VM states and historical activity logs for audit and optimization insights."
-    ]
+      "Built dashboards to visualize real-time VM states and historical activity logs for audit and optimization insights.",
+    ],
+  },
+  {
+    title: "CERTMAN – SSL Certificate Renewal Automation",
+    techStack: "Java Spring Boot, Python, REST APIs, AWS Secret Manager",
+    description: [
+      "Automated SSL/TLS cert expiration monitoring for 1000+ .ford.com domains with daily scans, email/text alerts, and dashboard tracking.",
+      "Enabled CSR generation, CA approval workflows, and delivery of certificates + private keys for CERTMAN-based apps.",
+      "Supported onboarding for internal and external certs, reducing manual effort and outages by 60%+ across teams.",
+    ],
   },
   {
     title: "PAM – Privileged Access Manager",
-    techStack: "Python, PostgreSQL, REST APIs",
+    techStack: "Python, PostgreSQL, REST APIs, Kubernetes, Terraform",
     description: [
-      "Designed secure backend services enabling fine-grained access control across 800+ user roles and application scopes.",
-      "Implemented access delegation workflows and RBAC using custom policy engine; integrated audit logging for compliance.",
-      "Built internal tooling for user onboarding/offboarding with detailed access rule propagation."
-    ]
+      "Implemented scalable backend services for PAM enabling fine-grained access control across 800+ user roles with modular policy enforcement.",
+      "Integrated Just-In-Time (JIT) access workflows to auto-provision time-bound privileges, reducing standing access exposure by 85%.",
+      "Managed RBAC delegation, onboarding/offboarding tooling, and infrastructure provisioning using Terraform on Kubernetes clusters.",
+    ],
   },
   {
     title: "PCAS – Public Cloud AI Services",
@@ -48,7 +47,7 @@ export const projects: Project[] = [
     description: [
       "Built an intelligent AI-powered support chatbot that serves 500+ daily cloud queries across teams via natural language chat UI.",
       "Indexed internal documentation using Elasticsearch and integrated GPT-4 via OpenAI API with contextual prompt templates.",
-      "Used DialogFlow + spaCy to support multi-intent flows, entity recognition and feedback-based fine-tuning workflows."
-    ]
-  }
+      "Used DialogFlow + spaCy to support multi-intent flows, entity recognition, and feedback-based fine-tuning workflows.",
+    ],
+  },
 ];

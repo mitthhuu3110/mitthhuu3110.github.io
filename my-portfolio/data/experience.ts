@@ -13,10 +13,9 @@ export const experiences: Experience[] = [
     location: 'Chennai, India',
     duration: 'July 2024 – Present',
     bullets: [
-      'Developed Central Shutdown Automation (CSA) using Java - Spring Boot, React, and AWS to manage VM lifecycles during weekends/holidays. Reduced cloud costs by 25%+ through user-configurable scheduling and lifecycle policies.',
-      'Designed scalable backend services for Privileged Access Manager (PAM) to enable fine-grained access control across 800+ user roles using Python, REST APIs, and PostgreSQL. Integrated role-based access delegation workflows.',
-      'Created CERTMAN (SSL/TLS certificate renewal automation) using Java - Spring Boot, Python, REST APIs, and Secret Manager. Monitored 1000+ .ford.com certificates and automated CSR generation, CA workflows, and multi-channel alerts.',
-      'Built PCAS chatbot (Public Cloud AI Support) leveraging GPT, Dialogflow, Elasticsearch, and spaCy to handle 500+ daily support queries using a conversational interface integrated with internal documents.',
+      'Developed Central Shutdown Automation (CSA) using Java Spring Boot, PostgreSQL, and AWS to manage VM lifecycles during weekends/holidays, reducing cloud costs by 25%+ through user-configurable scheduling.',
+      'Created SSL/TLS certificate renewal automation (CERTMAN) using Java Spring Boot, Python, and AWS Secret Manager, monitoring 1000+ .ford.com certificates and automating CSR generation, CA approval, and multi-channel alerts.',
+      'Built Public Cloud AI Support (PCAS) chatbot using GPT-4.0, Dialogflow, Elasticsearch, and spaCy for NLP, handling 500+ daily support queries through a conversational interface integrated with internal documentation.',
     ],
   },
   {
@@ -25,10 +24,8 @@ export const experiences: Experience[] = [
     location: 'Chennai, India',
     duration: 'Jan 2024 – June 2024',
     bullets: [
-      'Developed a high-throughput REST API using Flask and deployed on GKE (Google Kubernetes Engine), capable of handling over 10,000+ JSON requests/hour. Included versioned rollouts and metrics monitoring.',
-      'Built robust unit/integration test suites using JUnit and PyTest, while contributing reusable modules for internal applications.',
-      'Integrated API documentation and security measures using Swagger and Apigee; streamlined developer onboarding.',
-      'Led a full-stack internal tooling initiative to automate service health checks and reduce manual debug hours across engineering teams.',
+      'Engineered a high-throughput Flask-based REST API deployed on AWS, efficiently processing 10K+ JSON requests/hour with versioned rollouts, autoscaling, and metrics monitoring.',
+      'Led a full-stack internal tooling initiative to automate service health checks and integrated robust test suites (JUnit, PyTest) with Swagger and Apigee, saving 100+ debugging hours and improving incident response reliability.',
     ],
   },
 ];
