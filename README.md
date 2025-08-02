@@ -1,5 +1,5 @@
-### This is my portfolio website. It is deployed directly to Vercel. 
--> All the changes done will directly be deployed to vercel automatically without manual intervention. This is Mark Manson theme based website built everything from scratch. 
+## This is my portfolio website. It is deployed directly to Vercel. 
+> All the changes done will directly be deployed to vercel automatically without manual intervention. This is Mark Manson theme based website built everything from scratch. 
 The tech stack that is being used is as follows
 1. Next.js
 2. Node.js
